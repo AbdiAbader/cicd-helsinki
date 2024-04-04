@@ -26,7 +26,7 @@ jobs:
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-app
      
       - name: Deploy to Render 
-        uses: RenderIO/render-deploy@v1.4.0
+        uses: cicd-helsinki/render-deploy@v1.4.0
         with:
           service_id: ${{ secrets.RENDER_SERVICE_ID }}
           api_token: ${{ secrets.RENDER_API_TOKEN }}
